@@ -2,21 +2,71 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PuppyPaw's Products</title>
     <style>
-        /* 아이콘과 텍스트를 보기 좋게 정렬하기 위한 간단한 스타일 */
-        a {
+        /* 전체적인 레이아웃을 위한 스타일 */
+        body {
+            font-family: sans-serif;
+            text-align: center; /* 모든 요소를 중앙 정렬 */
+            padding: 40px 20px;
+        }
+
+        /* 메인 타이틀 스타일 */
+        h1 {
+            font-size: 2.5em; /* 타이틀 글자 크기 키움 */
+            color: #2c3e50;
+            margin-bottom: 10px; /* 타이틀과 구분선 사이 간격 */
+        }
+
+        /* 구분선 스타일 */
+        hr {
+            width: 250px; /* 구분선 길이 조절 */
+            border: 0;
+            height: 1px;
+            background-color: #bdc3c7;
+            margin: 20px auto; /* 위아래, 좌우 자동 간격으로 중앙 정렬 */
+        }
+
+        /* 제품 링크 컨테이너 스타일 */
+        .product-link {
             display: inline-flex;
             align-items: center;
             text-decoration: none; /* 링크 밑줄 제거 */
-            color: #333; /* 글자 색상 */
-            font-size: 1.2em; /* 글자 크기 */
-            font-family: sans-serif;
+            color: #333; /* 기본 글자 색상 */
+            padding: 10px;
+            border-radius: 10px;
+            transition: background-color 0.2s;
         }
-        img {
-            width: 50px;  /* 아이콘 크기 조절 */
+
+        /* 링크에 마우스를 올렸을 때 효과 */
+        .product-link:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* 제품 아이콘 이미지 스타일 */
+        .product-link img {
+            width: 50px;  /* 아이콘 크기 */
             height: 50px;
-            margin-right: 10px; /* 아이콘과 텍스트 사이 간격 */
+            margin-right: 15px; /* 아이콘과 텍스트 사이 간격 */
+        }
+
+        /* 제품명 텍스트 스타일 */
+        .product-link .title {
+            font-size: 36px; /* 아이콘과 비슷하게 글자 크기 키움 */
+            font-weight: bold; /* Bold체 적용 */
+            text-decoration: underline; /* 밑줄 적용 */
+        }
+
+        /* '(바로가기)' 텍스트 스타일 */
+        .product-link .shortcut {
+            font-size: 14px; /* 바로가기 텍스트는 작게 */
+            font-weight: normal; /* Bold체 해제 */
+            color: #7f8c8d; /* 약간 연한 색상으로 변경 */
+            margin-left: 8px; /* 제품명과의 간격 */
+            /* align-self를 이용해 살짝 위로 올려서 정렬 */
+            align-self: flex-end;
+            padding-bottom: 4px;
         }
     </style>
 </head>
@@ -24,9 +74,12 @@
 
     <h1>PuppyPaw's Products</h1>
 
-    <a href="https://kadmiran.github.io/puppypaw_sudoku/">
-        <img src="https://kadmiran.github.io/icon_puppypaw_sudoku.png">
-        <span>PuppyPaw 스도쿠</span>
+    <hr>
+
+    <a class="product-link" href="https://kadmiran.github.io/puppypaw_sudoku/">
+        <img src="https://kadmiran.github.io/icon_puppypaw_sudoku.png" alt="PuppyPaw 스도쿠 아이콘">
+        <span class="title">PuppyPaw 스도쿠</span>
+        <span class="shortcut">(바로가기)</span>
     </a>
 
 </body>
